@@ -7,6 +7,4 @@ class Comment < ApplicationRecord
   def update_comments_count
     post.update_comments_counter
   end
-
-
 end

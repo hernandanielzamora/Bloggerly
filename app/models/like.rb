@@ -7,5 +7,4 @@ class Like < ApplicationRecord
   def update_likes_count
     post.update_likes_counter
   end
-
 end
