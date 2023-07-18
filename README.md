@@ -1,6 +1,5 @@
 # Bloggerly!
 
-<img src="https://i.postimg.cc/HxP1wGMd/cathalog-my-things-scheme.png" />
 
 # 📗 Table of Contents
 
