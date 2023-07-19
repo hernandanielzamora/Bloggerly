@@ -3,12 +3,15 @@ class User < ApplicationRecord
   has_many :comments, foreign_key: :author_id
   has_many :posts, foreign_key: :author_id
 
+  validates :name, presence: true
+  validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
   def update_posts_counter
-    update(posts_counter: posts.count)
+    update_column(:posts_counter, posts.count)
   end
 
   def update_comments_counter
-    update(comments_counter: comments.count)
+    update_column(:comments_counter, comments.count)
   end
 
   def last_posts
