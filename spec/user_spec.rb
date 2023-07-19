@@ -30,7 +30,7 @@ RSpec.describe User, type: :model do
 
     it 'updates the posts_counter with the count of associated posts' do
       @user.posts.create(author: @user, title: 'Title', text: 'First post', likes_counter: 0,
-        comments_counter: 0)
+                         comments_counter: 0)
       @user.update_posts_counter
       @user.reload
       expect(@user.posts_counter).to eq(1)
@@ -38,9 +38,9 @@ RSpec.describe User, type: :model do
 
     it 'updates the comments_counter with the count of associated comments' do
       post = @user.posts.create(author: @user, title: 'Title', text: 'First post', likes_counter: 0,
-        comments_counter: 0)
+                                comments_counter: 0)
       post.comments.create(author_id: @user.id, text: 'Great post!')
-      
+
       @user.update_comments_counter
       @user.reload
       expect(@user.comments_counter).to eq(1)
