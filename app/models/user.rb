@@ -7,11 +7,11 @@ class User < ApplicationRecord
   validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   def update_posts_counter
-    update(posts_counter: posts.count)
+    update_column(:posts_counter, posts.count)
   end
 
   def update_comments_counter
-    update(comments_counter: comments.count)
+    update_column(:comments_counter, comments.count)
   end
 
   def last_posts
