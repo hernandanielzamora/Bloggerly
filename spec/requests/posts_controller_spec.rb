@@ -1,9 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-
   describe 'Get /index' do
-    before (:example) { get '/users/1/posts'}
+    before :example do
+      get '/users/1/posts'
+    end
     it 'returns http success (code 200)' do
       expect(response).to have_http_status(:ok)
     end
@@ -18,7 +19,9 @@ RSpec.describe 'Posts', type: :request do
   end
 
   describe 'Get /show' do
-    before(:example) { get '/users/1/posts/2' } 
+    before :example do
+      get '/users/1/posts/2'
+    end
     it 'returns http success (code 200)' do
       expect(response).to have_http_status(:ok)
     end
