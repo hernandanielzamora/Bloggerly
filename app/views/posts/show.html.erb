@@ -1,31 +1,21 @@
 <main>
-  <section>
-    <div> 
-      <h3> Post #<%= @post.id %> by <%= @post.author.name %> </h3>
-      <h4> Comments: <%= @post.comments_counter %> Likes: <%= @post.likes_counter %></h4>
+  <section class="post-box">
+    <div class="content-box"> 
+      <div class="flex post-header"> 
+        <h3 class="title"> Post #<%= @post.id %> by <%= @post.author.name %> </h3>
+        <h4 class="counters"> Comments: <%= @post.comments_counter %> | Likes: <%= @post.likes_counter %></h4>
+      </div>
+      <p class="text"><%= @post.text %></p>
     </div>
 
+    <%# Comments Section %>
     <div>
-      <p><%= @post.text %></p>
-    </div>
-  </section>
-
-  <%# Comments Section %>
-
-  <section>
-    <div>
-      <h3>Comments:</h3>
+      <h3 class="subtitle">Comments:</h3>
       <ul>
         <% @post.comments.each do |comment| %>
-          <p><%= comment.author.name %>: <%= comment.text %></p>
+          <p class="text"><%= comment.author.name %>: <%= comment.text %></p>
         <% end %>
       </ul>
     </div>
-
   </section>
-
-
-
-
-
 </main>
