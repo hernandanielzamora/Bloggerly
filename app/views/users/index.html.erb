@@ -1,0 +1,19 @@
+<main>
+  <section>
+    <ul class="card-container">
+      <% @users.each do |user| %>
+        <%= link_to user do %>
+          <li class="card">
+            <div class="flex">
+              <div class="photo-container"></div>
+              <div class="user-information flex">
+                <h2><%= user.name %></h2>
+                <p>Number of posts: <%= user.posts_counter %></p>
+              </div>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </section>
+</main>

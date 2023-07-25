@@ -1,0 +1,43 @@
+<main>
+  <section class="card-container">
+    <div class="card flex"> 
+      <div class="photo-container"></div>
+      <div class="user-information flex">
+        <h1><%= @user.name %></h1>
+        <p>Number of posts: <%= @user.posts_counter %></p>
+      </div>
+    </div>
+  </section>
+
+  <%# Posts Section %>
+  <section>
+    <ul>
+      <% @posts.each do |post| %>
+        <%= link_to user_post_path(user_id: post.author_id, id: post.id) do %>
+          <li class="post-box">
+            <div class="content-box"> 
+              <h2 class="title"><%= post.title%></h2>
+              <h4 class="text"><%= post.text%></h4>
+              <div class="flex counters">
+                <p>Comments: <%= post.comments_counter %> | Likes: <%= post.likes_counter %></p>
+              </div>
+            </div>
+            <%# Comments Section %>
+            <div class="content-box">
+              <h2>Comments:</h2>
+              <ul>
+                <li>
+                  <% post.last_comments.each do |comment| %>
+                    <p class="text"> <%= comment.author.name %>: <%= comment.text %> </p>
+                  <% end %>
+                </li>
+              <ul>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </section> 
+</main>
+
+
