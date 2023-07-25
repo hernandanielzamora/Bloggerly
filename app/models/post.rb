@@ -3,13 +3,13 @@ class Post < ApplicationRecord
   has_many :likes
   belongs_to :author, class_name: 'User', foreign_key: 'author_id'
 
-  after_create :update_posts_count
+  after_create :update_user_posts_counter
+  after_create :update_comments_counter
+  after_create :update_likes_counter
 
   validates :title, presence: true, length: { maximum: 250 }
-  validates :comments_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
-  validates :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
-  def update_posts_count
+  def update_user_posts_counter
     author.update_posts_counter
   end
 

@@ -1,0 +1,41 @@
+<main>
+  <section>
+    <div>Border</div>
+    <div>
+      <h1><%= @user.name %></h1>
+      <p>Number of posts: <%= @user.posts_counter %></p>
+    </div>
+  </section>
+
+  <%# Bio Section %>
+  <section>
+    <h2>Bio</h2>
+    <p><%= @user.bio %></p>
+  </section>
+
+  <%# Posts Section %>
+  <section>
+    <ul>
+      <% @user.last_posts.each do |post| %>
+        <%= link_to user_posts_path(@user) do %>
+          <li>
+            <h3><%= post.title%></h3>
+            <h4><%= post.text%></h4>
+            <div>
+              <p>Comments: <%= post.comments_counter %></p>
+              <p>Likes: <%= post.likes_counter %> </p>
+            </div>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+    <%= link_to "See all posts", user_posts_path(user_id: @user.id), class: "btn" %>
+  </section> 
+</main>
+
+
+
+
+
+
+
