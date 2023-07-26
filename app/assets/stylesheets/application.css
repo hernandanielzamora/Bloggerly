@@ -132,3 +132,41 @@ a {
   align-items: center;
   margin-bottom: 3%;
 }
+
+/* Create new Post */
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-content: center;
+  margin-left: 5%;
+}
+
+.form-title {
+  font-size: 1.2em;
+  padding-bottom: 2%;
+}
+
+.input {
+  margin-bottom: 2%;
+  padding: 1%;
+  border-radius: 5px;
+}
+
+.form-btn {
+  width: 50%;
+  align-self: center;
+}
+
+/* Create new Comment - Add a Like */
+
+.post-btn {
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+
+.post-btn .btn {
+  margin: 3%;
+}

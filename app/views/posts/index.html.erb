@@ -11,6 +11,9 @@
 
   <%# Posts Section %>
   <section>
+    <div class="btn-container">
+      <%= link_to "Create a post",new_user_post_path(@user), class: "btn right" %>
+    </div>
     <ul>
       <% @posts.each do |post| %>
         <%= link_to user_post_path(user_id: post.author_id, id: post.id) do %>
