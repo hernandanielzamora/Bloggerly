@@ -2,7 +2,7 @@
   <section class="post-box">
     <div class="content-box"> 
       <div class="flex post-header"> 
-        <h3 class="title"> Post #<%= @post.id %> by <%= @post.author.name %> </h3>
+        <h3 class="title"> <%= @post.title %> by <%= @post.author.name %> </h3>
         <h4 class="counters"> Comments: <%= @post.comments_counter %> | Likes: <%= @post.likes_counter %></h4>
       </div>
       <p class="text"><%= @post.text %></p>
