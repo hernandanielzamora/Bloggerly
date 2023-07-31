@@ -87,6 +87,11 @@ a {
   width: 5em;
 }
 
+.user-img {
+  height: 5em;
+  width: 5em;
+}
+
 .user-information {
   width: 90%;
   align-items: center;
