@@ -143,6 +143,13 @@ To deploy this project locally, you can run:
 - Twitter: [@HernanZamora14](https://twitter.com/HernanZamora14)
 - LinkedIn: [Linkedin](https://www.linkedin.com/in/hernan-zamora-03a697236/)
 
+## 👥 Author <a name="authors"></a>
+
+👤 **Cristian Zambrano**
+
+- GitHub: [@zamcham](https://github.com/zamcham)
+- LinkedIn: [Cristian Zambrano](https://www.linkedin.com/in/cristian-zamcham)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
