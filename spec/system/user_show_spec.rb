@@ -43,12 +43,26 @@ RSpec.describe 'User Show Page', type: :system do
   end
 
   context 'User Show view' do
+    subject { user }
+
+    before do
+      post
+      visit user_path subject
+    end
+
     it "Shows the user's first three posts" do
       expect(page).to have_content(post.title)
     end
 
     it 'Shows a button that redirects to posts index' do
       expect(page).to have_link('See all posts')
+    end
+
+    it 'Redirects to the show page of a post when it is clicked' do
+      click_link subject.posts.first.title
+
+      expect(page).to have_content(subject.posts.first.title)
+      expect(page).to have_content(subject.posts.first.text)
     end
 
     it 'Redirects the user to the all posts page' do

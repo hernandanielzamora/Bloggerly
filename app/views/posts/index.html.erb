@@ -46,6 +46,9 @@
         <% end %>
       <% end %>
     </ul>
+    <div class="pagination-container">
+      <%= will_paginate @posts, inner_window: 1, outer_window: 0, previous_label: 'Pagination', next_label: 'Pagination' %>
+    </div>
   </section> 
 </main>
 

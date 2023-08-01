@@ -64,4 +64,13 @@ RSpec.describe 'Post Index', type: :system do
     click_link post.title
     expect(page).to have_current_path(user_post_path(user_id: user.id, id: post.id))
   end
+
+  it 'Shows the pagination button' do
+    Post.create(title: 'Second Post', text: 'Testing text for Second post', author: user, comments_counter: 0,
+                likes_counter: 0)
+    Post.create(title: 'Third Post', text: 'Testing text for Third post', author: user, comments_counter: 0,
+                likes_counter: 0)
+    visit user_posts_path(user_id: user.id)
+    expect(page).to have_content('Pagination')
+  end
 end
