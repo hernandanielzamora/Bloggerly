@@ -87,6 +87,11 @@ a {
   width: 5em;
 }
 
+.user-img {
+  height: 5em;
+  width: 5em;
+}
+
 .user-information {
   width: 90%;
   align-items: center;
@@ -123,6 +128,11 @@ a {
   margin: 20px auto;
   transition: transform 0.3s ease;
   cursor: pointer;
+}
+
+.pagination-container {
+  text-align: center;
+  margin: 2%;
 }
 
 /* Posts Show */

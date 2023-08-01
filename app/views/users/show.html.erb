@@ -1,7 +1,13 @@
 <main>
   <section class="card-container">
     <div class="card flex"> 
-      <div class="photo-container"></div>
+      <div class="photo-container">
+        <% if @user.photo.present? %>
+          <%= image_tag(@user.photo, class: "user-img") %>
+        <% else %>
+          <%= image_tag('default_photo.png', class: "user-img") %>
+        <% end %>
+      </div>
       <div class="user-information flex">
         <h1><%= @user.name %></h1>
         <p>Number of posts: <%= @user.posts_counter %></p>

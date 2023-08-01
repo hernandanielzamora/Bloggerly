@@ -2,10 +2,16 @@
   <section>
     <ul class="card-container">
       <% @users.each do |user| %>
-        <%= link_to user do %>
+        <%= link_to user_path(user) do %>
           <li class="card">
             <div class="flex">
-              <div class="photo-container"></div>
+              <div class="photo-container">
+                <% if user.photo.present? %>
+                  <%= image_tag(user.photo, class: "user-img") %>
+                <% else %>
+                  <%= image_tag('default_photo.png', class: "user-img") %>
+                <% end %>
+              </div>
               <div class="user-information flex">
                 <h2><%= user.name %></h2>
                 <p>Number of posts: <%= user.posts_counter %></p>
