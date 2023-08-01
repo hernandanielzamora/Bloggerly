@@ -40,7 +40,8 @@ a {
   justify-content: end;
 }
 
-.notice, .alert {
+.notice,
+.alert {
   color: #b31800;
   font-size: 1em;
   padding: 0.2%;
@@ -58,7 +59,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 2%;
-  background-color: #f0f0f0
+  background-color: #f0f0f0;
 }
 
 #right-header {
