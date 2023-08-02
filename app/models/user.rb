@@ -23,8 +23,14 @@ class User < ApplicationRecord
     posts.order(created_at: :desc).limit(3)
   end
 
+  after_initialize :set_default_role, if: :new_record?
+
+  def set_default_role
+    self.role ||= 'user'
+  end
+
   private
-  
+
   def generate_api_token
     self.api_token = SecureRandom.hex(16)
   end
