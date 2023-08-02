@@ -40,6 +40,34 @@ a {
   justify-content: end;
 }
 
+.notice,
+.alert {
+  color: #b31800;
+  font-size: 1em;
+  padding: 0.2%;
+}
+
+.shared-link {
+  color: #824805;
+  padding-top: 1%;
+}
+
+/* Application view (header) */
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+  background-color: #f0f0f0;
+}
+
+#right-header {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
 /* Buttons */
 .btn-container {
   text-align: center;
@@ -59,6 +87,11 @@ a {
 
 .btn:hover {
   background-color: #b31800;
+}
+
+.navbar-btn {
+  padding: 2px 10px;
+  font-size: 1em;
 }
 
 /* Users Index */

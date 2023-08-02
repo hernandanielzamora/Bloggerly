@@ -9,6 +9,10 @@ gem 'rails-controller-testing'
 
 gem 'will_paginate'
 
+gem 'devise', '~> 4.9'
+
+gem 'letter_opener'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 7.0.6'
 
