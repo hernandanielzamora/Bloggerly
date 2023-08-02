@@ -13,6 +13,8 @@ gem 'devise', '~> 4.9'
 
 gem 'letter_opener'
 
+gem 'cancancan', '~> 3.5'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 7.0.6'
 
