@@ -17,8 +17,11 @@
   <%# Posts Section %>
   <section>
     <div class="btn-container">
-      <%= link_to "Create a post",new_user_post_path(@user), class: "btn right" %>
+     <% if current_user %>
+        <%= link_to "Create a post",new_user_post_path(@user), class: "btn" %>
+      <% end %>
     </div>
+
     <ul>
       <% @posts.each do |post| %>
         <%= link_to user_post_path(user_id: post.author_id, id: post.id) do %>
@@ -50,5 +53,3 @@
     </div>
   </section> 
 </main>
-
-
