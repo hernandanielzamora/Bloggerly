@@ -9,6 +9,7 @@ class User < ApplicationRecord
   validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0, allow_nil: true }
 
   before_create :set_initial_posts_counter
+  before_save :generate_api_token
 
   def update_posts_counter
     update_column(:posts_counter, posts.count)
@@ -23,6 +24,10 @@ class User < ApplicationRecord
   end
 
   private
+  
+  def generate_api_token
+    self.api_token = SecureRandom.hex(16)
+  end
 
   def set_initial_posts_counter
     self.posts_counter = 0

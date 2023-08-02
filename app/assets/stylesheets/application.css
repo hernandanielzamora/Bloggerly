@@ -52,6 +52,11 @@ a {
   padding-top: 1%;
 }
 
+.token {
+  margin-left: 2%;
+  font-size: 1.5em;
+}
+
 /* Application view (header) */
 
 .app-header {
