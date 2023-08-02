@@ -94,6 +94,17 @@ a {
   font-size: 1em;
 }
 
+.mini-btn {
+  width: 10em;
+  height: 1.5em;
+  font-size: 1em;
+  padding: 1px 1px;
+}
+
+.delete-btn {
+  width: 7em;
+}
+
 /* Users Index */
 .card-container {
   width: 90%;
@@ -174,6 +185,11 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3%;
+}
+
+.comment-container {
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Create new Post */
