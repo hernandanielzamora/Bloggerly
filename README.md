@@ -21,7 +21,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 Ruby Capstone: Bloggerly <a name="about-project"></a>
+# 📖  Bloggerly <a name="about-project"></a>
 
 **Bloggerly** Is a classic example of a blog website. This websilte will show the list of posts and will allow users to interact with them by adding comments and liking posts, as any other social website.
 
