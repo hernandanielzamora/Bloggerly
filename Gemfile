@@ -19,6 +19,8 @@ gem 'active_model_serializers', '~> 0.10.13'
 
 gem 'jwt'
 
+gem 'rswag'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 7.0.6'
 
