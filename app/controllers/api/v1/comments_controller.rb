@@ -6,6 +6,8 @@ class Api::V1::CommentsController < ApplicationController
     post = user.posts.find(params[:post_id])
     comments = post.comments
     render json: comments
+  rescue StandardError => e
+    render json: { error: e.message }, status: :bad_request
   end
 
   def create
@@ -18,9 +20,12 @@ class Api::V1::CommentsController < ApplicationController
       author: user
     )
 
-    new_comment.save
-    render json: { success: 'Comment added!' }
+    if new_comment.save
+      render json: { success: 'Comment added!' }, status: :created
+    else
+      render json: { error: new_comment.errors.full_messages }, status: :bad_request
+    end
   rescue StandardError => e
-    render json: { error: e.message }
+    render json: { error: e.message }, status: :bad_request
   end
 end
