@@ -20,7 +20,7 @@ class Api::V1::CommentsController < ApplicationController
 
     new_comment.save
     render json: { success: 'Comment added!' }
-    rescue StandardError => e
-     render json: { error: e.message }
+  rescue StandardError => e
+    render json: { error: e.message }
   end
 end
